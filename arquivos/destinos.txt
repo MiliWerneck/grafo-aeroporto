@@ -1,0 +1,48 @@
+Aeroporto: Confins(Brasil) - Doha(Catar)
+
+Destinos Nacionais:
+
+Barreiras (BA)
+Belém (PA)
+Brasília (DF)
+Cabo Frio (RJ)
+Campinas (SP)
+Carajás (PA)
+Comandatuba (BA)
+Congonhas (SP)
+Cuiabá (MT)
+Curitiba (PR)
+Fortaleza (CE)
+Foz do Iguaçu (PR)
+Florianópolis (SC)
+Goiânia (GO)
+Governador Valadares (MG)
+Guanambi (BA)
+Guarulhos (SP)
+Ilhéus (BA)
+Imperatriz (MA)
+Ipatinga (MG)
+Jericoacoara (CE)
+João Pessoa (PB)
+Jundiaí (SP)
+Maceió (AL)
+Marabá (PA)
+Montes Claros (MG)
+Natal (RN)
+Porto Alegre (RS)
+Porto Seguro (BA)
+Recife (PE)
+Ribeirão preto (SP)
+Salvador (BA)
+Santos Dumont (RJ)
+São Luís (MA)
+Uberaba (MG)
+Uberlândia (MG)
+Vitoria (ES)
+Vitória da Conquista (BA)
+
+Destinos Internacionais:
+
+Cidade do Panamá
+Lisboa
+

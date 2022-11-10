@@ -1,0 +1,42 @@
+DOH#Doha-DO-CAT
+CON#Confins-MG-BRL
+BRR#Barreiras-BA-BRL
+BEL#Belém-PA-BRL
+BRS#Brasília-DF-BRL
+CAB#Cabo Frio-RJ-BRL
+CAM#Campinas-SP-BRL
+CAR#Carajás-PA-BRL
+COM#Comandatuba-BA-BRL
+CON#Congonhas-SP-BRL
+CUI#Cuiabá-MT-BRL
+CUR#Curitiba-PR-BRL
+FOR#Fortaleza-CE-BRL
+FOZ#Foz do Iguaçu-PR-BRL
+FLO#Florianópolis-SC-BRL
+GOI#Goiânia-GO-BRL
+GOV#Governador Valadares-MG-BRL
+GUA#Guanambi-BA-BRL
+GRU#Guarulhos-SP-BRL
+ILH#Ilhéus-BA-BRL
+IMP#Imperatriz-MA-BRL
+IPT#Ipatinga-MG-BRL
+JER#Jericoacoara-CE-BRL
+JPE#João Pessoa-PB-BRL
+JUN#Jundiaí-SP-BRL
+MCO#Maceió-AL-BRL
+MAR#Marabá-PA-BRL
+MOC#Montes Claros-MG-BRL
+NAT#Natal-RN-BRL
+POA#Porto Alegre-RS-BRL
+POS#Porto Seguro-BA-BRL
+REC#Recife-PE-BRL
+RIP#Ribeirão preto-SP-BRL
+SAL#Salvador-BA-BRL
+SAD#Santos Dumont-RJ-BRL
+SAO#São Luís-MA-BRL
+UBE#Uberaba-MG-BRL
+BER#Uberlândia-MG-BRL
+VIT#Vitoria-ES-BRL
+VCO#Vitória da Conquista-BA-BRL
+CPA#Cidade do Panamá-PA-PA
+LPT#Lisboa-AZ-PT

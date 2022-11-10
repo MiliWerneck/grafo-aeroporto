@@ -4,41 +4,57 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <queue>
+#include <string>
 
 using namespace std;
 
 class Vertice {
 private:
-	int valor;
+	// int valor;
+	string sigla;
+	string aeroporto;
+	string estado;
+	string pais;
+
 	vector <Vertice> prox;
 public:
-	Vertice(int valor) { set_valor(valor); };
+	Vertice() {};
+	Vertice(string sigla, string aeroporto, string estado, string pais);
 	~Vertice() {};
 
-	void set_valor(int valor);
-	void set_prox(Vertice v);
+	string get_sigla();
+	string get_aeroporto();
+	string get_estado();
+	string get_pais();
 
-	int get_valor();
+	void set_sigla(string sigla);
+	void set_aeroporto(string aeroporto);
+	void set_estado(string estado);
+	void set_pais(string pais);
+
 	vector <Vertice> get_prox();
+	void set_prox(Vertice v);
 };
 
 class Grafo {
 private:
 	int V;
 	int E;
-	unordered_map<int, Vertice> adj;
-	// vector <Vertice> adj;
+	unordered_map<string, Vertice> adj;
+	// unordered_map<int, Vertice> adj;
 public:
-	Grafo(int V);
+	Grafo(vector <Vertice> vertices);
 	~Grafo() {};
 
-	void init();
-	void insere(int v1, int v2);
+	void init(vector <Vertice> vertices);
+	void insere(string v1, string v2);
 	void print_grafo();
+	void BFS(Vertice s);
 
 	void set_V(int V);
 	void set_E(int E);
-	void set_adj(Vertice v, int chave);
+	void set_adj(Vertice v);
 
 	int get_V();
 	int get_E();
