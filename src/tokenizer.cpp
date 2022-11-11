@@ -20,3 +20,21 @@ void Tokenizer::tokenizar(char del, bool controle, bool control_recursao, string
 		vertices->push_back(*this->vert);
 	}
 }
+
+void Tokenizer::tokenizar_insercao(string text, queue<pair<string, string>> *entradas) {
+	stringstream sstream(text);
+	string token;
+	string first;
+	string second;
+	bool control = true;
+
+	while (getline(sstream, token, ',')) {
+		if (control == true) {
+			first.assign(token);
+			control = false;
+		} else {
+			second.assign(token);
+		}
+	}
+	entradas->push(make_pair(first, second));
+}

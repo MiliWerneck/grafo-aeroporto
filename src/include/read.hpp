@@ -14,6 +14,7 @@ class Read {
 private:
 public:
 	void readEntrada(vector<Vertice> *vertices);
+	void readInsercao(queue<pair<string, string>> *entradas);
 };
 
 #endif

@@ -25,44 +25,66 @@ void Grafo::insere(string v1, string v2) {
 	}
 }
 
-// void Grafo::BFS(Vertice s) {
-// 	queue<int> f;
+void Grafo::BFS(Vertice origem, Vertice destino) {
+	queue<string> f;
 
-// 	int cor[get_V()]; //0 Branco, 1 Cinza, 2 Preto
-// 	int dist[get_V()];
-// 	int pai[get_V()]; // -1 == NULL
+	unordered_map<string, int> cor; //0 Branco, 1 Cinza, 2 Preto
+	unordered_map<string, int> dist;
+	unordered_map<string, string> pai; // -1 == NULL
 
-// 	for (int i = 0; i < get_V(); i++)
-// 		if (i != s.get_sigla()) {
-// 			cor[i] = 0;
-// 			dist[i] = -1; //infinito
-// 			pai[i] = -1; // não tem pai ainda
-// 		}
+	unordered_map<string, Vertice> ::iterator it;
 
-// 	cor[s.get_sigla()] = 1;
-// 	dist[s.get_sigla()] = 0;
-// 	pai[s.get_sigla()] = -1;unordered_map<int, Vertice> adj;
-// 	f.pop();
+	for (it = this->adj.begin(); it != this->adj.end(); ++it) {
+		if (it->first.compare(origem.get_sigla()) != 0) {
+			cor.insert({ it->first, BRANCO });
+			dist.insert({ it->first, -1 });
+			pai.insert({ it->first, NOTPAI });
+		}
+	}
 
-// 	vector<Vertice> v = this->adj.find(u)->second.get_prox();
-// 	for (auto valor : v) {
-// 		if (cor[valor.get_sigla()] == 0) {
-// 			cor[valor.get_sigla()] = 1;
-// 			dist[valor.get_sigla()] = dist[u] + 1;
-// 			printf("%d %d\n", valor.get_sigla(), dist[valor.get_sigla()]);
-// 			pai[valor.get_sigla()] = u;
-// 			f.push(valor.get_sigla());
-// 		}
-// 		if (valor.get_sigla().compare("DOH") == 0) {
-// 			cout << "Destino encontrado " << dist[valor.get_sigla()] << endl;
-// 			return;
-// 		}
-// 	}
-// 	cor[u] = 2;
-// 	printf("Vertex:%d Antecessor:%d\n", u, pai[u]);
-// }
+	cor.insert({ origem.get_sigla(), CINZA });
+	dist.insert({ origem.get_sigla(), 0 });
+	pai.insert({ origem.get_sigla(), NOTPAI });
 
-// }
+	f.push(origem.get_sigla());
+
+	while (f.size() > 0) {
+		string u = f.front();
+		f.pop();
+
+		vector<Vertice> v = this->adj.find(u)->second.get_prox();
+
+		for (auto valor : v) {
+			if (cor[valor.get_sigla()] == BRANCO) {
+				cor[valor.get_sigla()] = CINZA;
+				dist[valor.get_sigla()] = dist[u] + 1;
+				cout << valor.get_sigla() << " " << dist[valor.get_sigla()] << endl;
+				pai[valor.get_sigla()] = u;
+				f.push(valor.get_sigla());
+			}
+			if (valor.get_sigla().compare(destino.get_sigla()) == 0) {
+				stack<string> ascendente;
+				string atual = destino.get_sigla();
+				string asc;
+
+				while (atual.compare(origem.get_sigla()) != 0) {
+					asc.assign(pai[atual]);
+					ascendente.push(asc);
+					atual = asc;
+				}
+				cout << endl;
+				cout << "Destino encontrado " << dist[valor.get_sigla()] << " vértices" << endl;
+				while (ascendente.size() != 0) {
+					cout << ascendente.top() << " ";
+					ascendente.pop();
+				}
+				cout << "[ " << destino.get_sigla() << " ]" << endl;
+				return;
+			}
+		}
+		cor[u] = PRETO;
+	}
+}
 
 void Grafo::print_grafo() {
 	unordered_map<string, Vertice> ::iterator it;
