@@ -5,6 +5,7 @@ int main() {
 
 	Read r;
 	vector <Vertice> vertices;
+	//teste
 	r.readEntrada(&vertices);
 
 	Grafo *grafo = new Grafo(vertices);
