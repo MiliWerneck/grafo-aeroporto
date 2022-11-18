@@ -17,7 +17,6 @@ using namespace std;
 
 class Vertice {
 private:
-	// int valor;
 	string sigla;
 	string aeroporto;
 	string estado;
@@ -48,7 +47,6 @@ private:
 	int V;
 	int E;
 	unordered_map<string, Vertice> adj;
-	// unordered_map<int, Vertice> adj;
 public:
 	Grafo(vector <Vertice> vertices);
 	~Grafo() {};

@@ -58,7 +58,7 @@ void Grafo::BFS(Vertice origem, Vertice destino) {
 			if (cor[valor.get_sigla()] == BRANCO) {
 				cor[valor.get_sigla()] = CINZA;
 				dist[valor.get_sigla()] = dist[u] + 1;
-				cout << valor.get_sigla() << " " << dist[valor.get_sigla()] << endl;
+				//cout << valor.get_sigla() << " " << dist[valor.get_sigla()] << endl;
 				pai[valor.get_sigla()] = u;
 				f.push(valor.get_sigla());
 			}

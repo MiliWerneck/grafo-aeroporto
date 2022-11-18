@@ -5,7 +5,7 @@ int main() {
 
 	Read r;
 	vector <Vertice> vertices;
-	//teste
+
 	r.readEntrada(&vertices);
 
 	Grafo *grafo = new Grafo(vertices);
@@ -21,7 +21,7 @@ int main() {
 
 	Vertice origem;
 	Vertice destino;
-	origem.set_sigla("UBE");
+	origem.set_sigla("CON");
 	destino.set_sigla("DOH");
 	grafo->BFS(origem, destino);
 
